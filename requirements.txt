@@ -1,0 +1,18 @@
+# Runtime dependencies for qfl-medmnist
+# Pinned to the versions used in the paper experiments
+
+torch==2.11.0
+pennylane==0.44.1
+medmnist>=3.0.0
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+scikit-learn>=1.3
+pyyaml>=6.0
+tqdm>=4.65
+
+# The susqa logger (released as a separate package)
+# Until published on PyPI, install from source:
+#   pip install git+https://github.com/AkilaAgnesS/susqa.git
+# After PyPI release, this line will pin a version:
+#   susqa>=0.1.0

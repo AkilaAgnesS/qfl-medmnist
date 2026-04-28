@@ -1,0 +1,14 @@
+experiment_id: smoke_C1_classical_breast
+model:
+  name: classical_cnn
+  in_channels: 1
+  num_classes: 2
+data:
+  dataset: breastmnist
+  batch_size: 32
+  root: data/raw
+training:
+  epochs: 2
+  lr: 1.0e-3
+  seed: [0]
+noise_sweep: [0.0]

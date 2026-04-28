@@ -1,0 +1,17 @@
+{
+  "experiment_id": "fl_C3_hybrid_pneumonia_dirichlet05__seed0",
+  "case_study": "C3_hybrid_quantum",
+  "dataset": "pneumoniamnist",
+  "accuracy": 0.7916666666666666,
+  "f1": 0.7427962662337663,
+  "auc": 0.8819526627218934,
+  "P": 3530,
+  "P_bytes_fp32": 14120,
+  "C_round_bytes": 14120,
+  "C_total_bytes": 1694400,
+  "Q": 3163776000,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "train_seconds=326.8 partition=dirichlet | gate_count=56 n_qubits=8 n_layers=2"
+}

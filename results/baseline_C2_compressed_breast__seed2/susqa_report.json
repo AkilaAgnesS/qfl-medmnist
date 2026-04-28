@@ -1,0 +1,17 @@
+{
+  "experiment_id": "baseline_C2_compressed_breast__seed2",
+  "case_study": "C2_compressed",
+  "dataset": "breastmnist",
+  "accuracy": 0.7756410256410257,
+  "f1": 0.7285067873303168,
+  "auc": 0.8059732664995822,
+  "P": 12714,
+  "P_bytes_fp32": 50856,
+  "C_round_bytes": 50856,
+  "C_total_bytes": 101712,
+  "Q": 0,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "train_seconds=6.2"
+}

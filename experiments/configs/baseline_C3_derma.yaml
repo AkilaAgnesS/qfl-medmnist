@@ -1,0 +1,22 @@
+# Hybrid quantum baseline on DermaMNIST.
+# 7 classes -> 8-qubit Pauli-Z readout linearly maps to 7 logits.
+# Slightly slower than Pneumonia centralized due to multi-class loss surface.
+experiment_id: baseline_C3_hybrid_derma
+model:
+  name: hybrid_qnn
+  in_channels: 3
+  num_classes: 7
+  n_qubits: 8
+  n_layers: 2
+  noise_p: 0.0
+  shots_per_inference: 1000
+data:
+  dataset: dermamnist
+  batch_size: 32
+  root: data/raw
+training:
+  epochs: 8
+  lr: 5.0e-3
+  class_weighting: true
+  seed: [0, 1, 2]
+noise_sweep: [0.0, 1.0e-3, 1.0e-2]

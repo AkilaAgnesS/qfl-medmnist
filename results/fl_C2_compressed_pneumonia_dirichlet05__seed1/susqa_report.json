@@ -1,0 +1,17 @@
+{
+  "experiment_id": "fl_C2_compressed_pneumonia_dirichlet05__seed1",
+  "case_study": "C2_compressed",
+  "dataset": "pneumoniamnist",
+  "accuracy": 0.8317307692307693,
+  "f1": 0.8085816872975018,
+  "auc": 0.9115055884286654,
+  "P": 12714,
+  "P_bytes_fp32": 50856,
+  "C_round_bytes": 50856,
+  "C_total_bytes": 12714000,
+  "Q": 0,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "train_seconds=32.0 partition=dirichlet"
+}

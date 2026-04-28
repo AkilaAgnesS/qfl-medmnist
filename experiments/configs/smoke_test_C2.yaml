@@ -1,0 +1,15 @@
+experiment_id: smoke_C2_compressed_breast
+model:
+  name: classical_compressed
+  in_channels: 1
+  num_classes: 2
+  hidden: [16, 8]
+data:
+  dataset: breastmnist
+  batch_size: 32
+  root: data/raw
+training:
+  epochs: 2
+  lr: 1.0e-3
+  seed: [0]
+noise_sweep: [0.0]

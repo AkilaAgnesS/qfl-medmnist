@@ -1,0 +1,5 @@
+dataset,setting,comparison,diff,eps,p_lower,p_upper,equivalent_at_5pct
+pneumoniamnist,fl_iid,C3_hybrid_quantum - C1_classical (AUC),0.0073,0.01,0.0,0.147,False
+pneumoniamnist,fl_iid,C3_hybrid_quantum - C2_compressed (AUC),0.0078,0.01,0.0,0.212,False
+breastmnist,fl_dirichlet_alpha=0.5,C3_hybrid_quantum - C1_classical (AUC),0.0572,0.01,0.115,0.801,False
+breastmnist,fl_dirichlet_alpha=0.5,C3_hybrid_quantum - C2_compressed (AUC),0.0484,0.01,0.129,0.771,False

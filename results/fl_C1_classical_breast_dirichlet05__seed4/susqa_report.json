@@ -1,0 +1,17 @@
+{
+  "experiment_id": "fl_C1_classical_breast_dirichlet05__seed4",
+  "case_study": "C1_classical",
+  "dataset": "breastmnist",
+  "accuracy": 0.7564102564102564,
+  "f1": 0.6175483870967742,
+  "auc": 0.7412280701754387,
+  "P": 26434,
+  "P_bytes_fp32": 105736,
+  "C_round_bytes": 105736,
+  "C_total_bytes": 26434000,
+  "Q": 0,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "train_seconds=10.4 partition=dirichlet"
+}

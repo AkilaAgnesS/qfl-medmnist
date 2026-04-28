@@ -1,0 +1,17 @@
+{
+  "experiment_id": "fl_C3_hybrid_breast_dirichlet05__seed0",
+  "case_study": "C3_hybrid_quantum",
+  "dataset": "breastmnist",
+  "accuracy": 0.7307692307692307,
+  "f1": 0.4222222222222222,
+  "auc": 0.7211779448621554,
+  "P": 3530,
+  "P_bytes_fp32": 14120,
+  "C_round_bytes": 14120,
+  "C_total_bytes": 2118000,
+  "Q": 458640000,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "train_seconds=97.3 partition=dirichlet | gate_count=56 n_qubits=8 n_layers=2"
+}

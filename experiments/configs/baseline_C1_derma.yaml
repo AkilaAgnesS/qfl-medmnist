@@ -1,0 +1,15 @@
+experiment_id: baseline_C1_classical_derma
+model:
+  name: classical_cnn
+  in_channels: 3      # DermaMNIST is RGB
+  num_classes: 7
+data:
+  dataset: dermamnist
+  batch_size: 64
+  root: data/raw
+training:
+  epochs: 25
+  lr: 1.0e-3
+  class_weighting: true
+  seed: [0, 1, 2]
+noise_sweep: [0.0]

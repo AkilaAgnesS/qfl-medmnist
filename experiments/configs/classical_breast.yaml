@@ -1,0 +1,17 @@
+experiment_id: classical_centralized_breast
+model:
+  name: classical_cnn
+  in_channels: 1
+  num_classes: 2
+data:
+  dataset: breastmnist
+  resolution: 28
+  batch_size: 32
+training:
+  epochs: 30
+  lr: 1.0e-3
+  optimizer: adam
+  seed: [0, 1, 2]
+logging:
+  wandb_project: qfl-medmnist
+  results_dir: results/

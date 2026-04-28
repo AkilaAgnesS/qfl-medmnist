@@ -1,0 +1,26 @@
+experiment_id: hybrid_qfl_pneumonia_iid_5clients
+model:
+  name: hybrid_qnn
+  in_channels: 1
+  num_classes: 2
+  n_qubits: 8
+  n_layers: 2
+  noise_p: 0.0
+data:
+  dataset: pneumoniamnist
+  resolution: 28
+  batch_size: 32
+fl:
+  n_clients: 5
+  rounds: 25
+  local_epochs: 1
+  partition: iid          # one of: iid, dirichlet
+  dirichlet_alpha: 0.5    # used only if partition: dirichlet
+  strategy: fedavg
+training:
+  lr: 1.0e-3
+  optimizer: adam
+  seed: [0, 1, 2]
+logging:
+  wandb_project: qfl-medmnist
+  results_dir: results/

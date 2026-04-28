@@ -1,0 +1,16 @@
+{
+  "experiment_id": "smoke_C3_hybrid_breast__seed0",
+  "case_study": "C3_hybrid_quantum",
+  "dataset": "breastmnist",
+  "accuracy": 0.7307692307692307,
+  "P": 1926,
+  "P_bytes_fp32": 7704,
+  "C_round_bytes": 7704,
+  "C_total_bytes": 15408,
+  "Q": 8736000,
+  "eta": {
+    "0e+00": 1.0,
+    "1e-03": 1.0
+  },
+  "notes": "train_seconds=3.5 | gate_count=16 n_qubits=4 n_layers=1"
+}

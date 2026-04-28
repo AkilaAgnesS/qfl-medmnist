@@ -1,0 +1,17 @@
+{
+  "experiment_id": "fl_C3_hybrid_pneumonia_iid__seed2",
+  "case_study": "C3_hybrid_quantum",
+  "dataset": "pneumoniamnist",
+  "accuracy": 0.8589743589743589,
+  "f1": 0.8417247939124921,
+  "auc": 0.9283749726057418,
+  "P": 3530,
+  "P_bytes_fp32": 14120,
+  "C_round_bytes": 14120,
+  "C_total_bytes": 1694400,
+  "Q": 3163776000,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "train_seconds=330.4 partition=iid | gate_count=56 n_qubits=8 n_layers=2"
+}

@@ -1,0 +1,21 @@
+# Tiny FL smoke test: C1 classical CNN, BreastMNIST, 3 clients, 3 rounds.
+# Purpose: verify the federated pipeline works end-to-end before running real configs.
+experiment_id: fl_smoke_C1_classical_breast
+model:
+  name: classical_cnn
+  in_channels: 1
+  num_classes: 2
+data:
+  dataset: breastmnist
+  batch_size: 32
+  root: data/raw
+fl:
+  n_clients: 3
+  rounds: 3
+  local_epochs: 1
+  partition: iid
+  strategy: fedavg
+training:
+  lr: 1.0e-3
+  class_weighting: true
+  seed: [0]

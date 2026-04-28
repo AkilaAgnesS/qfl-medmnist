@@ -1,0 +1,21 @@
+experiment_id: fl_C2_compressed_derma_dirichlet05
+model:
+  name: classical_compressed
+  in_channels: 3
+  num_classes: 7
+  hidden: [16, 8]
+data:
+  dataset: dermamnist
+  batch_size: 64
+  root: data/raw
+fl:
+  n_clients: 5
+  rounds: 25
+  local_epochs: 1
+  partition: dirichlet
+  dirichlet_alpha: 0.5
+  strategy: fedavg
+training:
+  lr: 1.0e-3
+  class_weighting: true
+  seed: [0, 1, 2]

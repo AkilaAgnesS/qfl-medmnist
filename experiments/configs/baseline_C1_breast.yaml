@@ -1,0 +1,17 @@
+# Phase 3 baseline: classical CNN, BreastMNIST, centralized
+# Real training — should clearly beat the 0.731 majority-class baseline.
+experiment_id: baseline_C1_classical_breast
+model:
+  name: classical_cnn
+  in_channels: 1
+  num_classes: 2
+data:
+  dataset: breastmnist
+  batch_size: 32
+  root: data/raw
+training:
+  epochs: 30
+  lr: 1.0e-3
+  class_weighting: true
+  seed: [0, 1, 2]
+noise_sweep: [0.0]

@@ -1,0 +1,17 @@
+{
+  "experiment_id": "fl_smoke_C1_classical_breast__seed0",
+  "case_study": "C1_classical",
+  "dataset": "breastmnist",
+  "accuracy": 0.7243589743589743,
+  "f1": 0.6355734231542348,
+  "auc": 0.7132414369256475,
+  "P": 26434,
+  "P_bytes_fp32": 105736,
+  "C_round_bytes": 105736,
+  "C_total_bytes": 1903248,
+  "Q": 0,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "train_seconds=1.3 partition=iid"
+}

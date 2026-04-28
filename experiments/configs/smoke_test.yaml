@@ -1,0 +1,11 @@
+# Tiny end-to-end smoke test: run all three case studies on BreastMNIST
+# with a small number of epochs / qubits, single seed. Should finish in
+# minutes on CPU. Good for verifying the pipeline before launching
+# real experiments.
+#
+# Use:
+#   python experiments/run_centralized.py --config experiments/configs/smoke_test_C1.yaml
+#   python experiments/run_centralized.py --config experiments/configs/smoke_test_C2.yaml
+#   python experiments/run_centralized.py --config experiments/configs/smoke_test_C3.yaml
+#
+# This file is only a documentation header — the real configs are smoke_test_C1.yaml etc.

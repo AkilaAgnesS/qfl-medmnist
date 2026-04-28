@@ -1,0 +1,17 @@
+{
+  "experiment_id": "baseline_C1_classical_derma__seed0",
+  "case_study": "C1_classical",
+  "dataset": "dermamnist",
+  "accuracy": 0.7256857855361596,
+  "f1": 0.4694557304025957,
+  "auc": 0.9063844265088958,
+  "P": 26743,
+  "P_bytes_fp32": 106972,
+  "C_round_bytes": 106972,
+  "C_total_bytes": 213944,
+  "Q": 0,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "train_seconds=115.3"
+}

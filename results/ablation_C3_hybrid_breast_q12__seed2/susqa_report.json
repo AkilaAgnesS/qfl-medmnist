@@ -1,0 +1,19 @@
+{
+  "experiment_id": "ablation_C3_hybrid_breast_q12__seed2",
+  "case_study": "C3_hybrid_quantum",
+  "dataset": "breastmnist",
+  "accuracy": 0.6602564102564102,
+  "f1": 0.6400052248878827,
+  "auc": 0.757936507936508,
+  "P": 5126,
+  "P_bytes_fp32": 20504,
+  "C_round_bytes": 20504,
+  "C_total_bytes": 41008,
+  "Q": 458640000,
+  "eta": {
+    "0e+00": 1.0,
+    "1e-03": 1.0,
+    "1e-02": 1.0097087378640777
+  },
+  "notes": "codecarbon_kgCO2eq=0.000868769 | train_seconds=73.0 | gate_count=84 n_qubits=12 n_layers=2"
+}

@@ -1,0 +1,19 @@
+{
+  "experiment_id": "ablation_C3_hybrid_derma_q6__seed2",
+  "case_study": "C3_hybrid_quantum",
+  "dataset": "dermamnist",
+  "accuracy": 0.6688279301745635,
+  "f1": 0.11450772777730338,
+  "auc": 0.5038190049520843,
+  "P": 2839,
+  "P_bytes_fp32": 11356,
+  "C_round_bytes": 11356,
+  "C_total_bytes": 22712,
+  "Q": 2354352000,
+  "eta": {
+    "0e+00": 1.0,
+    "1e-03": 1.0,
+    "1e-02": 1.0
+  },
+  "notes": "codecarbon_kgCO2eq=0.000627712 | train_seconds=52.9 | gate_count=42 n_qubits=6 n_layers=2"
+}

@@ -1,0 +1,17 @@
+{
+  "experiment_id": "baseline_C2_compressed_derma__seed7",
+  "case_study": "C2_compressed",
+  "dataset": "dermamnist",
+  "accuracy": 0.6603491271820449,
+  "f1": 0.21918821227206195,
+  "auc": 0.8251855394260453,
+  "P": 37847,
+  "P_bytes_fp32": 151388,
+  "C_round_bytes": 151388,
+  "C_total_bytes": 302776,
+  "Q": 0,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "codecarbon_kgCO2eq=0.000149443 | train_seconds=11.7"
+}

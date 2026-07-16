@@ -1,0 +1,17 @@
+{
+  "experiment_id": "fl_C2_compressed_derma_dirichlet05__seed7",
+  "case_study": "C2_compressed",
+  "dataset": "dermamnist",
+  "accuracy": 0.6718204488778055,
+  "f1": 0.1531307833215935,
+  "auc": 0.7706431520719619,
+  "P": 37847,
+  "P_bytes_fp32": 151388,
+  "C_round_bytes": 151388,
+  "C_total_bytes": 37847000,
+  "Q": 0,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "codecarbon_kgCO2eq=0.000189716 | train_seconds=14.0 partition=dirichlet"
+}

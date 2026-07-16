@@ -1,0 +1,17 @@
+{
+  "experiment_id": "fl_C2_compressed_breast_iid__seed7",
+  "case_study": "C2_compressed",
+  "dataset": "breastmnist",
+  "accuracy": 0.7243589743589743,
+  "f1": 0.6746058695124909,
+  "auc": 0.7474937343358397,
+  "P": 12714,
+  "P_bytes_fp32": 50856,
+  "C_round_bytes": 50856,
+  "C_total_bytes": 12714000,
+  "Q": 0,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "codecarbon_kgCO2eq=2.55274e-05 | train_seconds=1.5 partition=iid"
+}

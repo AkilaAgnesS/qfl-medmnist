@@ -1,0 +1,22 @@
+{
+  "experiment_id": "baseline_C3_hybrid_breast__seed5",
+  "case_study": "C3_hybrid_quantum",
+  "dataset": "breastmnist",
+  "accuracy": 0.717948717948718,
+  "f1": 0.691089108910891,
+  "auc": 0.7949039264828738,
+  "P": 3530,
+  "P_bytes_fp32": 14120,
+  "C_round_bytes": 14120,
+  "C_total_bytes": 28240,
+  "Q": 305760000,
+  "eta": {
+    "0e+00": 1.0,
+    "1e-03": 1.0,
+    "1e-02": 1.0,
+    "5e-02": 1.0446428571428572,
+    "1e-01": 1.0625,
+    "2e-01": 1.0714285714285714
+  },
+  "notes": "codecarbon_kgCO2eq=0.000176677 | train_seconds=14.0 | gate_count=56 n_qubits=8 n_layers=2"
+}

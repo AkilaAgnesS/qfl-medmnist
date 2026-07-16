@@ -1,0 +1,17 @@
+{
+  "experiment_id": "baseline_C1_classical_breast__seed8",
+  "case_study": "C1_classical",
+  "dataset": "breastmnist",
+  "accuracy": 0.8076923076923077,
+  "f1": 0.7478448275862069,
+  "auc": 0.8118212197159566,
+  "P": 26434,
+  "P_bytes_fp32": 105736,
+  "C_round_bytes": 105736,
+  "C_total_bytes": 211472,
+  "Q": 0,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "codecarbon_kgCO2eq=4.01775e-05 | train_seconds=2.5"
+}

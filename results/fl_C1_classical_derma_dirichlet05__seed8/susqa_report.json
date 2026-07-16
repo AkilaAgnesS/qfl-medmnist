@@ -1,0 +1,17 @@
+{
+  "experiment_id": "fl_C1_classical_derma_dirichlet05__seed8",
+  "case_study": "C1_classical",
+  "dataset": "dermamnist",
+  "accuracy": 0.6374064837905237,
+  "f1": 0.26340478221767294,
+  "auc": 0.852019333846175,
+  "P": 26743,
+  "P_bytes_fp32": 106972,
+  "C_round_bytes": 106972,
+  "C_total_bytes": 26743000,
+  "Q": 0,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "codecarbon_kgCO2eq=0.000229637 | train_seconds=18.7 partition=dirichlet"
+}

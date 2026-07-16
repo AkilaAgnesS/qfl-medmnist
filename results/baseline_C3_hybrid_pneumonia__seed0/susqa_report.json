@@ -1,0 +1,22 @@
+{
+  "experiment_id": "baseline_C3_hybrid_pneumonia__seed0",
+  "case_study": "C3_hybrid_quantum",
+  "dataset": "pneumoniamnist",
+  "accuracy": 0.8365384615384616,
+  "f1": 0.8081597222222222,
+  "auc": 0.9219482796405873,
+  "P": 3530,
+  "P_bytes_fp32": 14120,
+  "C_round_bytes": 14120,
+  "C_total_bytes": 28240,
+  "Q": 2109184000,
+  "eta": {
+    "0e+00": 1.0,
+    "1e-03": 1.0,
+    "1e-02": 1.0,
+    "5e-02": 1.0019157088122606,
+    "1e-01": 0.9980842911877394,
+    "2e-01": 0.9559386973180077
+  },
+  "notes": "codecarbon_kgCO2eq=0.000638531 | train_seconds=54.4 | gate_count=56 n_qubits=8 n_layers=2"
+}

@@ -1,0 +1,23 @@
+# Qubit/bottleneck ablation (revision, R1 comment 3): vary n_qubits to justify
+# the 8-qubit headline architecture. 8-qubit results already exist as
+# baseline_C3_hybrid_derma. The classical bottleneck width equals n_qubits.
+experiment_id: ablation_C3_hybrid_derma_q6
+model:
+  name: hybrid_qnn
+  in_channels: 3
+  num_classes: 7
+  n_qubits: 6
+  n_layers: 2
+  noise_p: 0.0
+  shots_per_inference: 1000
+data:
+  dataset: dermamnist
+  batch_size: 32
+  root: data/raw
+training:
+  epochs: 8
+  lr: 5.0e-3
+  class_weighting: true
+  seed: [0, 1, 2]
+# NISQ-relevant noise levels only — the full sweep lives in the baselines.
+noise_sweep: [0.0, 1.0e-3, 1.0e-2]

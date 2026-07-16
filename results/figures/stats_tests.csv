@@ -23,6 +23,9 @@ dermamnist,fl_dirichlet_alpha=0.5,C2_compressed vs C3_hybrid_quantum (AUC),2.0,0
 dermamnist,fl_iid,C1_classical vs C2_compressed (AUC),0.0,0.25,3
 dermamnist,fl_iid,C1_classical vs C3_hybrid_quantum (AUC),0.0,0.25,3
 dermamnist,fl_iid,C2_compressed vs C3_hybrid_quantum (AUC),1.0,0.5,3
+pneumoniamnist,centralized,C1_classical vs C2_compressed (AUC),0.0,0.25,3
+pneumoniamnist,centralized,C1_classical vs C3_hybrid_quantum (AUC),3.0,1.0,3
+pneumoniamnist,centralized,C2_compressed vs C3_hybrid_quantum (AUC),0.0,0.25,3
 pneumoniamnist,fl_dirichlet_alpha=0.1,C1_classical vs C2_compressed (AUC),0.0,0.25,3
 pneumoniamnist,fl_dirichlet_alpha=0.1,C1_classical vs C3_hybrid_quantum (AUC),0.0,0.25,3
 pneumoniamnist,fl_dirichlet_alpha=0.1,C2_compressed vs C3_hybrid_quantum (AUC),3.0,1.0,3

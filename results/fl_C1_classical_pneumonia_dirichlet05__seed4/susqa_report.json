@@ -1,0 +1,17 @@
+{
+  "experiment_id": "fl_C1_classical_pneumonia_dirichlet05__seed4",
+  "case_study": "C1_classical",
+  "dataset": "pneumoniamnist",
+  "accuracy": 0.6810897435897436,
+  "f1": 0.5334798534798535,
+  "auc": 0.8685075608152532,
+  "P": 26434,
+  "P_bytes_fp32": 105736,
+  "C_round_bytes": 105736,
+  "C_total_bytes": 26434000,
+  "Q": 0,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "codecarbon_kgCO2eq=0.000135741 | train_seconds=10.5 partition=dirichlet"
+}

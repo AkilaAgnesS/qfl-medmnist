@@ -1,0 +1,17 @@
+{
+  "experiment_id": "baseline_C1_classical_pneumonia__seed1",
+  "case_study": "C1_classical",
+  "dataset": "pneumoniamnist",
+  "accuracy": 0.8830128205128205,
+  "f1": 0.8725229826353422,
+  "auc": 0.9338264299802761,
+  "P": 26434,
+  "P_bytes_fp32": 105736,
+  "C_round_bytes": 105736,
+  "C_total_bytes": 211472,
+  "Q": 0,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "train_seconds=42.2"
+}

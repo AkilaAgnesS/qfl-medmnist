@@ -3,8 +3,8 @@
   "case_study": "C3_hybrid_quantum",
   "dataset": "breastmnist",
   "accuracy": 0.782051282051282,
-  "f1": 0.7187698833510074,
-  "auc": 0.8009607351712614,
+  "f1": 0.7142241379310345,
+  "auc": 0.8176691729323309,
   "P": 3530,
   "P_bytes_fp32": 14120,
   "C_round_bytes": 14120,
@@ -13,7 +13,10 @@
   "eta": {
     "0e+00": 1.0,
     "1e-03": 1.0,
-    "1e-02": 1.0
+    "1e-02": 1.0,
+    "5e-02": 1.0081967213114753,
+    "1e-01": 0.9918032786885246,
+    "2e-01": 1.0
   },
-  "notes": "train_seconds=60.8 | gate_count=56 n_qubits=8 n_layers=2"
+  "notes": "codecarbon_kgCO2eq=0.000175446 | train_seconds=14.1 | gate_count=56 n_qubits=8 n_layers=2"
 }

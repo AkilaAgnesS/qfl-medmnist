@@ -1,0 +1,17 @@
+{
+  "experiment_id": "fl_C1_classical_breast_iid__seed4",
+  "case_study": "C1_classical",
+  "dataset": "breastmnist",
+  "accuracy": 0.717948717948718,
+  "f1": 0.6762264150943397,
+  "auc": 0.7694235588972431,
+  "P": 26434,
+  "P_bytes_fp32": 105736,
+  "C_round_bytes": 105736,
+  "C_total_bytes": 26434000,
+  "Q": 0,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "codecarbon_kgCO2eq=3.92962e-05 | train_seconds=2.5 partition=iid"
+}

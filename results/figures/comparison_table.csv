@@ -23,6 +23,9 @@ dermamnist,fl_dirichlet_alpha=0.5,C3_hybrid_quantum,0.691 ± 0.160,0.153 ± 0.03
 dermamnist,fl_iid,C1_classical,0.846 ± 0.010,0.262 ± 0.012,0.664 ± 0.003,26743,26.743,0,3
 dermamnist,fl_iid,C2_compressed,0.761 ± 0.015,0.178 ± 0.016,0.628 ± 0.009,37847,37.847,0,3
 dermamnist,fl_iid,C3_hybrid_quantum,0.595 ± 0.159,0.134 ± 0.033,0.660 ± 0.015,3647,1.751,4708704000,3
+pneumoniamnist,centralized,C1_classical,0.932 ± 0.006,0.865 ± 0.018,0.878 ± 0.013,26434,0.211,0,3
+pneumoniamnist,centralized,C2_compressed,0.918 ± 0.001,0.840 ± 0.010,0.856 ± 0.006,12714,0.102,0,3
+pneumoniamnist,centralized,C3_hybrid_quantum,0.932 ± 0.003,0.823 ± 0.047,0.849 ± 0.034,3530,0.028,2109184000,3
 pneumoniamnist,fl_dirichlet_alpha=0.1,C1_classical,0.475 ± 0.031,0.385 ± 0.000,0.625 ± 0.000,26434,26.434,0,3
 pneumoniamnist,fl_dirichlet_alpha=0.1,C2_compressed,0.600 ± 0.169,0.385 ± 0.000,0.625 ± 0.000,12714,12.714,0,3
 pneumoniamnist,fl_dirichlet_alpha=0.1,C3_hybrid_quantum,0.608 ± 0.094,0.385 ± 0.000,0.625 ± 0.000,3530,1.694,3163776000,3

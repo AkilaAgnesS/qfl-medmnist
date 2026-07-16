@@ -1,18 +1,38 @@
-# Runtime dependencies for qfl-medmnist
-# Pinned to the versions used in the paper experiments
+# Core ML — relaxed pins until we lock the environment, then we'll re-pin exactly
+torch>=2.6,<3
+torchvision>=0.21
+numpy>=2.0,<3
+scikit-learn>=1.5
+pandas>=2.2
 
-torch==2.11.0
-pennylane==0.44.1
-medmnist>=3.0.0
-numpy>=1.24
-pandas>=2.0
-matplotlib>=3.7
-scikit-learn>=1.3
+# Datasets
+medmnist>=3.0
+
+# Quantum
+pennylane>=0.39
+pennylane-lightning>=0.39
+# qiskit>=1.2            # uncomment if you switch to Qiskit ML
+
+# Federated learning — install with simulation extras to pull in Ray
+flwr[simulation]>=1.13
+
+# Experiment tracking
+wandb>=0.18
 pyyaml>=6.0
-tqdm>=4.65
 
-# The susqa logger (released as a separate package)
-# Until published on PyPI, install from source:
-#   pip install git+https://github.com/AkilaAgnesS/susqa.git
-# After PyPI release, this line will pin a version:
-#   susqa>=0.1.0
+# Analysis & figures
+matplotlib>=3.9
+seaborn>=0.13
+scipy>=1.13
+
+# Notebooks
+jupyterlab>=4.2
+
+# Manuscript generation (Word)
+python-docx>=1.1
+
+# Revision (SUSCOM major revision) — energy tracking + backend-calibrated noise
+codecarbon>=2.8
+pennylane-qiskit>=0.39
+qiskit-aer>=0.15
+qiskit-ibm-runtime>=0.34

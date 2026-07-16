@@ -3,6 +3,8 @@
   "case_study": "C3_hybrid_quantum",
   "dataset": "breastmnist",
   "accuracy": 0.7307692307692307,
+  "f1": 0.4222222222222222,
+  "auc": 0.6307435254803676,
   "P": 1926,
   "P_bytes_fp32": 7704,
   "C_round_bytes": 7704,
@@ -12,5 +14,5 @@
     "0e+00": 1.0,
     "1e-03": 1.0
   },
-  "notes": "train_seconds=3.5 | gate_count=16 n_qubits=4 n_layers=1"
+  "notes": "codecarbon_kgCO2eq=1.25505e-05 | train_seconds=0.5 | gate_count=16 n_qubits=4 n_layers=1"
 }

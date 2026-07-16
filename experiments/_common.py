@@ -57,6 +57,34 @@ def set_seed(seed: int) -> None:
         torch.cuda.manual_seed_all(seed)
 
 
+def maybe_start_tracker(enabled: bool, results_dir):
+    """Start a CodeCarbon EmissionsTracker if enabled and installed, else None.
+
+    Addresses R1: report measured energy/carbon of classical simulation +
+    training alongside the Q proxy metric.
+    """
+    if not enabled:
+        return None
+    try:
+        from codecarbon import EmissionsTracker
+    except ImportError:
+        print("  [codecarbon] not installed — skipping energy tracking (pip install codecarbon)")
+        return None
+    tracker = EmissionsTracker(output_dir=str(results_dir), log_level="error")
+    tracker.start()
+    return tracker
+
+
+def stop_tracker(tracker, logger) -> None:
+    """Stop tracker and record kgCO2eq in the SUSQA report notes."""
+    if tracker is None:
+        return
+    kg = tracker.stop()
+    if kg is not None:
+        logger.add_note(f"codecarbon_kgCO2eq={kg:.6g}")
+        print(f"  [codecarbon] {kg:.6g} kgCO2eq (details in emissions.csv)")
+
+
 def train_one_epoch(model, loader, opt, loss_fn, device) -> float:
     model.train()
     total, correct = 0, 0

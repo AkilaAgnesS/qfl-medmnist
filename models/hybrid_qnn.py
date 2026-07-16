@@ -23,14 +23,23 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-def make_qnode(n_qubits: int, n_layers: int, noise_p: float = 0.0):
-    """Build a PennyLane QNode + return TorchLayer-ready function."""
-    if noise_p > 0:
-        dev = qml.device("default.mixed", wires=n_qubits)
-    else:
-        dev = qml.device("default.qubit", wires=n_qubits)
+def make_qnode(n_qubits: int, n_layers: int, noise_p: float = 0.0, dev=None):
+    """Build a PennyLane QNode + return TorchLayer-ready function.
 
-    @qml.qnode(dev, interface="torch", diff_method="backprop")
+    If `dev` is given (e.g. a qiskit.aer device carrying a hardware-calibrated
+    noise model), it is used as-is and gradients fall back to a device-compatible
+    method ("backprop" only works on the default simulators).
+    """
+    if dev is None:
+        if noise_p > 0:
+            dev = qml.device("default.mixed", wires=n_qubits)
+        else:
+            dev = qml.device("default.qubit", wires=n_qubits)
+        diff_method = "backprop"
+    else:
+        diff_method = "best"
+
+    @qml.qnode(dev, interface="torch", diff_method=diff_method)
     def circuit(inputs, weights):
         # Angle encoding via AngleEmbedding — handles both unbatched (n_qubits,)
         # and batched (batch, n_qubits) inputs from TorchLayer correctly.
@@ -61,6 +70,7 @@ class HybridQNN(nn.Module):
         n_qubits: int = 8,
         n_layers: int = 2,
         noise_p: float = 0.0,
+        dev=None,
     ) -> None:
         super().__init__()
         self.n_qubits = n_qubits
@@ -71,7 +81,7 @@ class HybridQNN(nn.Module):
         self.pool = nn.MaxPool2d(2)
         self.bottleneck = nn.Linear(8 * 7 * 7, n_qubits)
 
-        circuit, weight_shapes = make_qnode(n_qubits, n_layers, noise_p)
+        circuit, weight_shapes = make_qnode(n_qubits, n_layers, noise_p, dev=dev)
         self.qlayer = qml.qnn.TorchLayer(circuit, weight_shapes)
 
         self.readout = nn.Linear(n_qubits, num_classes)

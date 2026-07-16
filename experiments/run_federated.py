@@ -41,7 +41,9 @@ from experiments._common import (  # noqa: E402
     case_study_tag,
     class_weights_from_labels,
     evaluate,
+    maybe_start_tracker,
     set_seed,
+    stop_tracker,
 )
 from fl.partition import dirichlet_partition, iid_partition  # noqa: E402
 from susqa import SUSQALogger, hybrid_qnn_gate_count  # noqa: E402
@@ -168,6 +170,15 @@ def run_one_seed(cfg: dict, seed: int, device: str) -> dict:
     global_model = build_model(cfg["model"]).to(device)
     global_params = get_state_arrays(global_model)
 
+    # Logger is created before training so CodeCarbon can write into results_dir.
+    experiment_id = f"{cfg['experiment_id']}__seed{seed}"
+    logger = SUSQALogger(
+        experiment_id=experiment_id,
+        case_study=case_study_tag(cfg["model"]["name"]),
+        dataset=dataset,
+    )
+    tracker = maybe_start_tracker(cfg["training"].get("codecarbon", False), logger.results_dir)
+
     history: list[dict] = []
     print(f"  [seed {seed}] starting {rounds} rounds with {n_active}/{n_clients} clients ({partition_kind})")
     t0 = time.time()
@@ -198,15 +209,14 @@ def run_one_seed(cfg: dict, seed: int, device: str) -> dict:
             f"acc={m['accuracy']:.3f}  f1={m['f1']:.3f}  auc={m['auc']:.3f}"
         )
     train_time = time.time() - t0
+    stop_tracker(tracker, logger)
+
+    # Save final global weights so trained circuits can be re-evaluated later
+    # (e.g. under a hardware-calibrated noise model) without retraining.
+    torch.save(global_model.state_dict(), logger.results_dir / "checkpoint.pt")
 
     final = history[-1]
 
-    experiment_id = f"{cfg['experiment_id']}__seed{seed}"
-    logger = SUSQALogger(
-        experiment_id=experiment_id,
-        case_study=case_study_tag(cfg["model"]["name"]),
-        dataset=dataset,
-    )
     logger.log_parameters(global_model)
     logger.log_communication(n_clients=n_clients, n_rounds=rounds)
     logger.log_metrics(final["accuracy"], final["f1"], final["auc"])
@@ -239,10 +249,20 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
+    parser.add_argument(
+        "--seeds", type=int, nargs="+", default=None,
+        help="Override the config's seed list (e.g. --seeds 3 4 5 6 7 8 9 to extend to 10 seeds).",
+    )
+    parser.add_argument(
+        "--codecarbon", action="store_true",
+        help="Track energy/CO2 of this run with CodeCarbon (overrides config).",
+    )
     args = parser.parse_args()
 
     cfg = yaml.safe_load(args.config.read_text())
-    seeds = cfg["training"].get("seed", [0])
+    if args.codecarbon:
+        cfg.setdefault("training", {})["codecarbon"] = True
+    seeds = args.seeds if args.seeds is not None else cfg["training"].get("seed", [0])
     if isinstance(seeds, int):
         seeds = [seeds]
 

@@ -2,9 +2,9 @@
   "experiment_id": "baseline_C3_hybrid_derma__seed2",
   "case_study": "C3_hybrid_quantum",
   "dataset": "dermamnist",
-  "accuracy": 0.658852867830424,
-  "f1": 0.23210703184411038,
-  "auc": 0.8174852476161848,
+  "accuracy": 0.6533665835411472,
+  "f1": 0.17973632778981125,
+  "auc": 0.7699472786744458,
   "P": 3647,
   "P_bytes_fp32": 14588,
   "C_round_bytes": 14588,
@@ -12,8 +12,11 @@
   "Q": 3139136000,
   "eta": {
     "0e+00": 1.0,
-    "1e-03": 1.0015140045420137,
-    "1e-02": 1.0090840272520818
+    "1e-03": 1.0,
+    "1e-02": 1.0015267175572518,
+    "5e-02": 1.0076335877862594,
+    "1e-01": 1.0152671755725189,
+    "2e-01": 1.0267175572519083
   },
-  "notes": "train_seconds=509.5 | gate_count=56 n_qubits=8 n_layers=2"
+  "notes": "codecarbon_kgCO2eq=0.00097165 | train_seconds=83.2 | gate_count=56 n_qubits=8 n_layers=2"
 }

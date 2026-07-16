@@ -1,0 +1,17 @@
+{
+  "experiment_id": "baseline_C2_compressed_pneumonia__seed3",
+  "case_study": "C2_compressed",
+  "dataset": "pneumoniamnist",
+  "accuracy": 0.8525641025641025,
+  "f1": 0.8374981600788052,
+  "auc": 0.9170611439842209,
+  "P": 12714,
+  "P_bytes_fp32": 50856,
+  "C_round_bytes": 50856,
+  "C_total_bytes": 101712,
+  "Q": 0,
+  "eta": {
+    "0e+00": 1.0
+  },
+  "notes": "codecarbon_kgCO2eq=6.63113e-05 | train_seconds=5.0"
+}
